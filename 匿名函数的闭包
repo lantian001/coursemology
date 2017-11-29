@@ -1,0 +1,10 @@
+即使是lambda函数,调用这个函数的时候,如果里面有参数,直接调用也会报错.
+例如
+term=lambda x: a*r**x
+def terms(a,r,n)
+  return term(n)
+这样会报错,因为在lambda函数内部的a,r,无法在terms中被输入.
+正确的方法应该是:
+def terms(a,r,n)
+  return lambda n:a*r**n
+应该写在函数内部
